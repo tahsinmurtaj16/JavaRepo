@@ -37,6 +37,9 @@ class Chicken extends Animal implements Edi{
         return "Chicken:Cock-doodle-doo";
     }
 }
+abstract class Fruit implements Edi{
+
+}
 class Apple implements Edi{
     @Override
     public String howToEat(){
