@@ -1,6 +1,6 @@
 //package java.lang.Comparable;
  //interface Comparable<ComparableRectangle>{
-   // public int compareTo(ComparableRectangle o);
+    //public int compareTo(ComparableRectangle o);
 //}
 public class ComparableRectangle extends RectangleFromSimpleGeometricObject
         implements Comparable<ComparableRectangle> {
@@ -10,12 +10,12 @@ public class ComparableRectangle extends RectangleFromSimpleGeometricObject
     }
     @Override // Implement the compareTo method defined in Comparable
     public int compareTo(ComparableRectangle o) {
-        if (getArea() > o.getArea())
-            return 1;
-        else if (getArea() < o.getArea())
-            return -1;
-        else
-            return 0;
+        return getArea() > o.getArea() ? 1:(getArea()<o.getArea()?-1:0);
+    }
+    @Override
+    public boolean equals(Object o)
+    {
+        return getArea() == (((ComparableRectangle)o).getArea());
     }
     @Override // Implement the toString method in GeometricObject
     public String toString() {
