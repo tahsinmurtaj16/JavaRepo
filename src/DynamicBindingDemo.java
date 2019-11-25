@@ -3,7 +3,7 @@ public class DynamicBindingDemo {
     {
         m(new GraduateStudent());
         m(new Student());
-        m(new Person());
+        m(new Person1());
         m(new Object());
     }
     public static void m(Object x)
@@ -14,7 +14,7 @@ public class DynamicBindingDemo {
 class GraduateStudent extends Student
 {
 }
-class Student extends Person
+class Student extends Person1
 {
     @Override
     public String toString()
@@ -22,7 +22,7 @@ class Student extends Person
         return " Student";
     }
 }
-class Person extends Object
+class Person1 extends Object
 {
    @Override
     public String toString()
