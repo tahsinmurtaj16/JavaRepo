@@ -18,7 +18,11 @@ public class TestCalendar {
         calendar.set(Calendar.DAY_OF_MONTH, 1); //to set the calendar to the first day of the month.
 
         Calendar calendar1 = new GregorianCalendar(2001,8,11);
-
+        Calendar calendar2 = calendar1;
+        Calendar calendar3 = (Calendar)calendar1.clone();
+        System.out.println("calender2 == calender1 "+(calendar2 == calendar1));
+        System.out.println("calendar1 == calendar3 "+(calendar1 == calendar3));
+        System.out.println("calendar3 equals calendar1 "+calendar3.equals(calendar1));
         String[] dayNameOfWeek = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
         System.out.println("September 11,2001 is a "+dayNameOfWeek[calendar1.get(Calendar.DAY_OF_WEEK)-1]);
         System.out.println();
