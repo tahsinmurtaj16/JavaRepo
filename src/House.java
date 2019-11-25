@@ -24,6 +24,10 @@ public class House implements Cloneable , Comparable<House> {
         return whenBuilt;
     }
     @Override
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
+    @Override
     public int compareTo(House o)
     {
         return area > o.area ? 1 : (area < o.area ? -1 : 0);
