@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class House implements Cloneable , Comparable<House> {
+public class House extends Object implements Cloneable , Comparable<House> {
     private int id;
     private double area;
     private java.util.Date whenBuilt;
